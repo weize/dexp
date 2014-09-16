@@ -45,6 +45,7 @@ public class DRMAAExecutor {
             template.setArgs(job.arguments);
             template.setNativeSpecification(job.nativeSpecification);
 
+            System.err.println(template.toString());
             // run the job
             id = session.runJob(template);
             int status = session.getJobProgramStatus(id);
