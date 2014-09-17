@@ -31,7 +31,7 @@ public class Test {
         job.arguments = new String[]{"-ea", memory_x, memory_s,
             "-Dfile.encoding=" + DEFAULT_ENCODING,
             "-cp", classPath, className};
-        job.nativeSpecification = "-q all.q -l mem_free=2.5G -l mem_token=2.5G";
+        job.nativeSpecification = "-q all.q";
         job.stdoutPath = temporary + File.separator + "stdout";
         job.stderrPath = temporary + File.separator + "stder";
         executor.submit(job);
