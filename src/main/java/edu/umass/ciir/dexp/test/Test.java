@@ -32,8 +32,8 @@ public class Test {
             "-Dfile.encoding=" + DEFAULT_ENCODING,
             "-cp", classPath, className};
         job.nativeSpecification = "-q all.q";
-        job.stdoutPath = temporary + File.separator + "stdout";
-        job.stderrPath = temporary + File.separator + "stder";
+        job.stdoutPath = ":" + temporary + File.separator + "stdout";
+        job.stderrPath = ":" + temporary + File.separator + "stder";
         executor.submit(job);
         executor.shutdown();
     }
