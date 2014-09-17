@@ -12,7 +12,8 @@ package edu.umass.ciir.dexp.test;
  */
 public class TestJob {
     
-    public static void main(String [] args) {
+    public static void main(String [] args) throws InterruptedException {
+        Thread.sleep(10000);
         System.out.println("hello world");
     }
     

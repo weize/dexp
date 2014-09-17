@@ -44,6 +44,8 @@ public class DRMAAExecutor {
             template.setRemoteCommand(job.command);
             template.setArgs(job.arguments);
             template.setNativeSpecification(job.nativeSpecification);
+            template.setOutputPath(job.stdoutPath);
+            template.setErrorPath(job.stderrPath);
 
             // run the job
             id = session.runJob(template);
