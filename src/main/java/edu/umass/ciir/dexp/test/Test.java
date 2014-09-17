@@ -20,8 +20,8 @@ public class Test {
 
     public static void main(String[] args) throws IOException {
         String classPath = System.getProperty("java.class.path");
-        String memory_x = "-Xmx1700m";
-        String memory_s = "-Xmx1700m";
+        String memory_x = "-Xmx200m";
+        String memory_s = "-Xmx200m";
         String temporary = new File(".").getCanonicalPath();
         String className = TestJob.class.getName();
         DRMAAExecutor executor = new DRMAAExecutor();
@@ -31,7 +31,7 @@ public class Test {
         job.arguments = new String[]{"-ea", memory_x, memory_s,
             "-Dfile.encoding=" + DEFAULT_ENCODING,
             "-cp", classPath, className};
-        job.nativeSpecification = "-l mem_free=4.5G -l mem_token=4.5G";
+        job.nativeSpecification = "-l mem_free=1G -l mem_token=1G";
         job.stdoutPath = ":" + temporary + File.separator + "stdout";
         job.stderrPath = ":" + temporary + File.separator + "stder";
         executor.submit(job);
