@@ -22,9 +22,6 @@ public class DRMAAExecutor {
 
     Session session;
 
-//    public String command = System.getenv("JAVA_HOME") + File.separator
-//          + "bin/java";
-//    public String classPath = System.getProperty("java.class.path");
     public DRMAAExecutor() {
         try {
             session = SessionFactory.getFactory().getSession();

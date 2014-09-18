@@ -7,14 +7,9 @@
 package edu.umass.ciir.dexp;
 
 /**
- * A job for qsub.
+ *
  * @author wkong
  */
-public class Job {
-    public String name;
-    public String command;
-    public String [] arguments;
-    public String stdoutPath;
-    public String stderrPath;
-    public String nativeSpecification;
+public interface Processor {
+    public void process(Tuple params);
 }

@@ -33,7 +33,7 @@ public class Test {
             "-cp", classPath, className};
         job.nativeSpecification = "-w n -q all.q -l mem_free=1G -l mem_token=1G";
         job.stdoutPath = ":" + temporary + File.separator + "stdout";
-        job.stderrPath = ":" + temporary + File.separator + "stder";
+        job.stderrPath = ":" + temporary + File.separator + "stderr";
         executor.submit(job);
         executor.shutdown();
     }

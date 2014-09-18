@@ -7,14 +7,9 @@
 package edu.umass.ciir.dexp;
 
 /**
- * A job for qsub.
+ * Tuple for one run. Will pass to a processor for each run.
+ * 
  * @author wkong
  */
-public class Job {
-    public String name;
-    public String command;
-    public String [] arguments;
-    public String stdoutPath;
-    public String stderrPath;
-    public String nativeSpecification;
+public class Tuple {
 }
